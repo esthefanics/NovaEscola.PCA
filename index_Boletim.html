@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <link href="https: //fonts.googleapis.com/css2?family= Zen+Antique & display = swap" rel="stylesheet">
+    <title> Boletim Escola Nova</title>
+
+</head>
+<img src="./assets/img/twitter_header_1500x500.png">
+<body bgcolor="#fff0f0">
+    <center><H1>Boletim 2022</H1></center>
+    <table border="2">
+        <tr>
+            <th>Código do Aluno</th>
+            <th>Turma</th>
+            <th collpan="7">Nome</th>
+            <th colspan="4">Português</th>
+            <th colspan="4">Inglês</th>
+            <th colspan="7">Matemática</th>
+            <th colspan="7">História</th>
+            <th colspan="7">Ciências</th>
+        </tr>
+        <tr>
+            <td>202201</td>
+            <td>1801</td>
+            <td>João Perez Meneghin</td>
+            <th colspan="3">8,0</th>
+            <th colspan="3">7,0</th>
+            <th colspan="6">5,5</th>
+            <th colspan="6">9,8</th>
+            <th colspan="6">10,0</th>
+
+        </tr>
+        <tr>
+            <td>202202</td>
+            <td>1801</td>
+            <td>Eduardo Montez Junior</td>
+            <th colspan="3">7,0</th>
+            <th colspan="3">2,0</th>
+            <th colspan="6">5,5</th>
+            <th colspan="6">9,8</th>
+            <th colspan="6">10,0</th>
+        </tr>
+        <tr>
+            <td>202203</td>
+            <td>1801</td>
+            <td>André Manoel Manaus</td>
+            <th colspan="3">10</th>
+            <th colspan="3">5,0</th>
+            <th colspan="6">5,5</th>
+            <th colspan="6">2,8</th>
+            <th colspan="6">0,0</th>
+        </tr>
+        <tr>
+            <td>202204</td>
+            <td>1801</td>
+            <td>Bárbara Perenyi da Costa</td>
+            <th colspan="3">10</th>
+            <th colspan="3">10,</th>
+            <th colspan="6">10</th>
+            <th colspan="6">10</th>
+            <th colspan="6">10,0</th>
+        </tr>
+        <tr>
+            <td>202205</td>
+            <td>1801</td>
+            <td>Vanessa de Souza Manaques</td>
+            <th colspan="3">5,0</th>
+            <th colspan="3">9,0</th>
+            <th colspan="6">10</th>
+            <th colspan="6">9,8</th>
+            <th colspan="6">2,0</th>
+        </tr>
+        <tr>
+            <td>202206</td>
+            <td>1801</td>
+            <td>Andressa Felippo Andreas</td>
+            <th colspan="3">8,0</th>
+            <th colspan="3">10,0</th>
+            <th colspan="6">5,5</th>
+            <th colspan="6">10</th>
+            <th colspan="6">0,0</th>
+        </tr>
+        <tr>
+            <td>202207</td>
+            <td>1801</td>
+            <td>Kalel Ricco Bandalone</td>
+            <th colspan="3">9,0</th>
+            <th colspan="3">10,0</th>
+            <th colspan="6">7,5</th>
+            <th colspan="6">9,8</th>
+            <th colspan="6">4,0</th>
+        </tr>
+        <tr>
+            <td>202208</td>
+            <td>1801</td>
+            <td>Milena Simões Andrade</td>
+            <th colspan="3">7,0</th>
+            <th colspan="3">10,0</th>
+            <th colspan="6">8,5</th>
+            <th colspan="6">9,8</th>
+            <th colspan="6">10,0</th>
+        </tr>
+        <tr>
+            <td>202209</td>
+            <td>1801</td>
+            <td>Jorge Reis dos Santos</td>
+            <th colspan="3">5,5</th>
+            <th colspan="3">10,0</th>
+            <th colspan="6">10,5</th>
+            <th colspan="6">6,8</th>
+            <th colspan="6">9,8</th>
+        </tr>
+    </table>
+    <table border="1" cellspacing="5" bgcolor="white">
+        <caption><b>Resultados de notas</b></caption>
+        <tr>
+            <th rowspan="2">Nome</th>
+            <th colspan="5">Notas</th>
+        </tr>
+        <tr>
+            <th>Portugês</th>
+            <th>Inglês</th>
+            <th>Matemática</th>
+            <th>História</th>
+            <th>Ciências</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="aname"></td>
+            <td><input type="text" id="am"></td>
+            <td><input type="text" id="aj"></td>
+            <td><input type="text" id="ad"></td>
+            <td><input type="text" id="an"></td>
+            <td><input type="text" id="ce"></td>
+        </tr>
+        <tr>
+            <th colspan="6" height="30">
+                <input type="submit" value="Adicionar á listagem e obter resultado" onclick="Sub()">
+            </th>
+        </tr>
+    </table>
+    <br>
+    <table border="3" cellspacing="5" bgcolor="white" height="10" width="600" cellpadding="10" id="TableScore">
+        <caption><b>LISTAGEM/CALCULADORA DE APROVAÇÃO</b></caption>
+        <tr>
+            <th width="170">Nome do Aluno</th>
+            <th>Total</th>
+            <th>Média final</th>
+            <th>Aprovado ou Reprovado</th>
+        </tr>
+
+    </table>
+    </center>
+    <script type="text/javascript">
+        function Sub() {
+            var n, k, r, e, v, sum, avg;
+            n = (document.getElementById('aname').value);
+            k = parseFloat(document.getElementById('am').value);
+            r = parseFloat(document.getElementById('aj').value);
+            e = parseFloat(document.getElementById('ad').value);
+            v = parseFloat(document.getElementById('an').value);
+            // Calculating Total
+            sum = k + r + e + v;
+            avg = sum / 4;
+            // Display on Student Data
+            var newTable = document.getElementById('TableScore');
+            var row = newTable.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(0);
+            var cell3 = row.insertCell(0);
+            var cell4 = row.insertCell(0);
+
+            cell4.innerHTML = n;
+            cell3.innerHTML = sum;
+            cell2.innerHTML = avg;
+
+            if (avg >= 5) {
+                cell1.innerHTML = "<font color=green>Aprovado</font>";
+            } else {
+                cell1.innerHTML = "<font color=red>Reprovado</font>";
+            }
+        }
+    </script>
+    <footer>
+        <h2 id="sobre">Detalhes</h2>
+        <p>Site desenvolvido por Esthefani Cavalcante, Sthephanie Loise e Daniel Barboza, estudantes de Análise e Desenvolvimento de sistemas
+            na universiade UNIGRANRIO.</p>
+        <img src="./assets/img/Esthefani.jpg" height="100" width="100" alt="img">
+        <img src="./assets/img/Sthephanie.jpeg" height="100" width="100" alt="img">
+        <img src="./assets/img/dan.jpg" height="100" width="100" alt="img">
+    </footer>
+
+</body>
+
+</html>
